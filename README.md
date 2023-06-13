@@ -56,4 +56,4 @@ If you are new to JavaScript game development, you may find the following resour
 
 Have fun playing and experimenting with the game!
 
-##Screenshot
+## Screenshot
