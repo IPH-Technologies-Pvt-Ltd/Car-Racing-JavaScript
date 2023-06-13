@@ -1,90 +1,59 @@
-<h3 align="center"> Classic Car Racing game using Vanilla JavaScript </h3>
+# Racing Game in JavaScript
 
-_**Technology Used**_
+This is a simple racing game implemented using JavaScript. The game allows players to control a car and compete against computer-controlled cars on a race track.
 
-_**icons**_ | _**names**_ |
-------------|-------------
-<a href="#"> <img alt="JavaScript" src="https://github.com/Abhishek-k-git/image/blob/main/javascript.svg" width="40" height="40" /> </a> | JavaScript
-<a href="#"> <img alt="HTML5" src="https://github.com/Abhishek-k-git/image/blob/main/html.svg" width="40" height="40" /> </a> | HTML5
-<a href="#"> <img alt="CSS3" src="https://github.com/Abhishek-k-git/image/blob/main/css.svg" width="40" height="40" /> </a> | css3
+## Setup
 
-- *Have a sneak peak to the code*
-```
-  //document.querySelector('');
-  //document.addEventListener('event',function);
-  
-  function keyDown(e){
-      e.preventDefault();
-      keys[e.key]=true;
-  }
-  function isCollide(a,b){
-      aRect=a.getBoundingClientRect();
-      bRect=b.getBoundingClientRect();
-      return !((aRect.bottom<bRect.top)||(aRect.top>bRect.bottom)||(aRect.right<bRect.left)||(aRect.left>bRect.right))
-  }
-  function isCollide(a,b){
-      aRect=a.getBoundingClientRect();
-      bRect=b.getBoundingClientRect();
-      return !((aRect.bottom<bRect.top)||(aRect.top>bRect.bottom)||(aRect.right<bRect.left)||(aRect.left>bRect.right))
-  }
-  function moveEnemy(car){
-      let enemy=document.querySelectorAll('.enemy');
-      enemy.forEach(function(item){
+To run the game, follow these steps:
 
-          if(isCollide(car,item)){
-              console.log("Bang!");
-              endGame();
-          }
-          if(item.y >=750){
-              item.y=-300;
-              item.style.left=Math.floor(Math.random()*350)+"px";
-          }
-          item.y+=player.speed;
-          item.style.top=item.y+"px";
-      })
-  }
-  function start(){
-      //gameArea.classList.remove('hide');
-      startScreen.classList.add('hide');
-      gameArea.innerHTML="";
-      player.start=true;
-      player.score=0;
-      window.requestAnimationFrame(gamePlay);
+1. Ensure you have a compatible web browser installed on your system.
+2. Download or clone the game source code to your local machine.
+3. Open the `index.html` file in your web browser.
 
-      for(x=0;x<5;x++){
-          let roadLine=document.createElement('div');
-          roadLine.setAttribute('class','lines');
-          roadLine.y=(x*150);
-          roadLine.style.top=roadLine.y+"px";
-          gameArea.appendChild(roadLine);
-      }
+## Game Controls
 
-      let car=document.createElement('div');
-      car.setAttribute('class','car');
-      gameArea.appendChild(car);
+- **Up Arrow**: Accelerate the car.
+- **Down Arrow**: Brake or reverse the car.
+- **Left Arrow**: Steer the car left.
+- **Right Arrow**: Steer the car right.
 
-      player.x=car.offsetLeft;
-      player.y=car.offsetTop;
+## Game Rules
 
-      for(x=0;x<3;x++){
-          let enemyCar=document.createElement('div');
-          enemyCar.setAttribute('class','enemy');
-          enemyCar.y=((x+1)*350)*-1;
-          enemyCar.style.top=enemyCar.y+"px";
-          enemyCar.style.backgroundColor=randomColor();
-          enemyCar.style.left=Math.floor(Math.random()*350)+"px";
-          gameArea.appendChild(enemyCar);
-      }
-  }
-```
+- The race starts when the game loads.
+- The player's car and the computer-controlled cars will move forward automatically.
+- Use the arrow keys to control the player's car and try to stay on the track.
+- The game ends when the player's car collides with the boundaries of the track or with another car.
+- The player's score is based on the distance traveled.
+- The game will display the player's final score once it ends.
 
-<a href="#"> <img align="left" src="https://github.com/Abhishek-k-git/image/blob/main/Screenshot%20(139).png" height="200px" width="250px"/></a>
-<a href="#"> <img align="left" src="https://github.com/Abhishek-k-git/image/blob/main/Screenshot%20(143).png" height="200px" width="250px"/></a>
-<a href="#"> <img align="left" src="https://github.com/Abhishek-k-git/image/blob/main/Screenshot%20(142).png" height="200px" width="250px"/></a><br>
-<!--
-empty line
--->
+## Code Structure
 
-:innocent:If you hit:boom: you loose...<br>
+The game code is organized into the following files:
 
-Created with :heart:
+- `index.html`: The HTML file that renders the game and includes the necessary JavaScript and CSS files.
+- `style.css`: The CSS file that defines the game's visual styles.
+- `main.js`: The main JavaScript file that contains the game logic.
+- `car.js`: A JavaScript file that defines the `Car` class, representing the player's car and the computer-controlled cars.
+- `track.js`: A JavaScript file that defines the `Track` class, representing the race track.
+
+## Modifying the Game
+
+Feel free to modify the game to add new features or customize its behavior. Some possible modifications include:
+
+- Adding power-ups or obstacles on the track.
+- Implementing multiple levels with different track layouts.
+- Adding sound effects or background music.
+- Including a timer and lap counting system.
+- Enhancing the graphics and visual effects.
+
+## Resources
+
+If you are new to JavaScript game development, you may find the following resources helpful:
+
+- [MDN Web Docs - JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [MDN Web Docs - HTML5 Game Development](https://developer.mozilla.org/en-US/docs/Games)
+- [Eloquent JavaScript](https://eloquentjavascript.net/)
+
+Have fun playing and experimenting with the game!
+
+##Screenshot
