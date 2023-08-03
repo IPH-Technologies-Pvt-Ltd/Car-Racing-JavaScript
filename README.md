@@ -1,4 +1,6 @@
 # Racing Game in JavaScript
+[![HTML](https://img.shields.io/badge/html-%2320232a.svg?style=for-the-badge&logo=html5&logoColor=%23E34F26)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS](https://img.shields.io/badge/css-%2320232a.svg?style=for-the-badge&logo=css3&logoColor=%231572B6)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
 This is a simple racing game implemented using JavaScript. The game allows players to control a car and compete against computer-controlled cars on a race track.
 
